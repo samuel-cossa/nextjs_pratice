@@ -1,6 +1,10 @@
-import { link } from 'fs';
+'use client'
 import Link from 'next/link';
 import React from 'react'
+import styles from "./navbar.module.css";
+// import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
+import DarkModeToggle from '@/components/DarkModeToggle/DarkModeToggle';
+
 
 
 const links = [
@@ -37,14 +41,22 @@ const links = [
 ];
 const Navbar = () => {
   return (
-    <div>
-      <Link href='/'>lamamia</Link>
-      <div>
+    <div className={styles.container}>
+      <Link href='/' className={styles.logo}>usolutions</Link>
+      <div className={styles.links}>
+        <DarkModeToggle/>
         {links.map((link)=>(
           <Link key={link.id} href={link.url}>
           {link.title}
           </Link>
         ))}
+        <button className={styles.logout} 
+          onClick={()=>{
+            console.log('logged out');
+          }}
+          >
+          Logout
+        </button>
       </div>
     </div>
   )
