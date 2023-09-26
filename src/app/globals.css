@@ -44,6 +44,10 @@ a {
   color: #bbb;
 }
 
+.theme {
+  transition: 1.5s all ease;
+}
+
 .container {
   max-width: 1366px;
   min-height: 100vh;
