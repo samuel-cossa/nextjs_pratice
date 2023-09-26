@@ -1,3 +1,21 @@
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Cardo", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #fafafa;
+  --color-primary: #27a776;
+  --color-secondary: #161718;
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,8 +26,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #111;
-  color: #bbb;
+  font-family: var(--font-default);
 }
 
 a {
@@ -17,11 +34,21 @@ a {
   color: inherit;
 }
 
+.light{
+    background-color: white;
+      color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
 .container {
   max-width: 1366px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
