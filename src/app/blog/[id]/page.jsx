@@ -50,7 +50,7 @@ const BlogPost = async ({params}) => {
       </div>
       <div className={styles.content}>
         <p className={styles.text}>
-          {data.content}
+          {data.username}
         </p>
       </div>
     </div>
